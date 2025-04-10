@@ -15,7 +15,9 @@
                                         </div>
                                         <div class="ml-4">
                                             <div class="flex items-center">
-                                                <p class="text-sm font-medium text-gray-900 dark:text-white">{{ $contact->first_name }} {{ $contact->last_name }}</p>
+                                                <a href="{{ route('admin.crm.contacts.show', $contact) }}" class="text-sm font-medium text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400">
+                                                    {{ $contact->first_name }} {{ $contact->last_name }}
+                                                </a>
                                                 @if($contact->is_primary)
                                                     <span class="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-100 dark:bg-cyan-800/30 text-cyan-800 dark:text-cyan-300">
                                                         <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
