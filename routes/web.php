@@ -168,7 +168,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/contacts', [App\Http\Controllers\Admin\Crm\ContactController::class, 'index'])->name('contacts.index');
         Route::get('/contacts/create', [App\Http\Controllers\Admin\Crm\ContactController::class, 'create'])->name('contacts.create');
         Route::get('/contacts/{id}', [App\Http\Controllers\Admin\Crm\ContactController::class, 'show'])->name('contacts.show');
-        Route::get('/contacts/{id}/edit', [App\Http\Controllers\Admin\Crm\ContactController::class, 'edit'])->name('contacts.edit');
+        Route::get('/contacts/{company}/edit', function (App\Models\Crm\Company $company) {
+            return view('admin.crm.companies.edit', ['company' => $company]);
+        })->name('contacts.edit');
         
         // Opportunities
         Route::get('/opportunities', function() {

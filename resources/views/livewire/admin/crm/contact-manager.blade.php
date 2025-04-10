@@ -122,7 +122,7 @@
                                         @if($contact->is_primary)
                                             <span class="ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
                                                 Primary
-                                            </span>
+                            </span>
                                         @endif
                                     </div>
                                     <div class="text-sm text-gray-500 dark:text-gray-400">{{ $contact->job_title }}</div>
